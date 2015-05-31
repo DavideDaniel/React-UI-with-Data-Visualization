@@ -1,0 +1,359 @@
+[
+    {
+        "Year": "1962",
+        "GDP - $ billion": "605.1",
+        "Total federal outlays - $ billion": "106.8",
+        "Total state/local outlays - $ billion": "0.0"
+    },
+    {
+        "Year": "1963",
+        "GDP - $ billion": "638.6",
+        "Total federal outlays - $ billion": "111.3",
+        "Total state/local outlays - $ billion": "0.0"
+    },
+    {
+        "Year": "1964",
+        "GDP - $ billion": "685.8",
+        "Total federal outlays - $ billion": "118.5",
+        "Total state/local outlays - $ billion": "0.0"
+    },
+    {
+        "Year": "1965",
+        "GDP - $ billion": "743.7",
+        "Total federal outlays - $ billion": "118.2",
+        "Total state/local outlays - $ billion": "0.0"
+    },
+    {
+        "Year": "1966",
+        "GDP - $ billion": "815",
+        "Total federal outlays - $ billion": "134.5",
+        "Total state/local outlays - $ billion": "0.0"
+    },
+    {
+        "Year": "1967",
+        "GDP - $ billion": "861.7",
+        "Total federal outlays - $ billion": "157.5",
+        "Total state/local outlays - $ billion": "0.0"
+    },
+    {
+        "Year": "1968",
+        "GDP - $ billion": "942.5",
+        "Total federal outlays - $ billion": "178.1",
+        "Total state/local outlays - $ billion": "0.0"
+    },
+    {
+        "Year": "1969",
+        "GDP - $ billion": "1019.9",
+        "Total federal outlays - $ billion": "183.6",
+        "Total state/local outlays - $ billion": "0.0"
+    },
+    {
+        "Year": "1970",
+        "GDP - $ billion": "1075.9",
+        "Total federal outlays - $ billion": "195.6",
+        "Total state/local outlays - $ billion": "0.0"
+    },
+    {
+        "Year": "1971",
+        "GDP - $ billion": "1167.8",
+        "Total federal outlays - $ billion": "210.2",
+        "Total state/local outlays - $ billion": "0.0"
+    },
+    {
+        "Year": "1972",
+        "GDP - $ billion": "1282.4",
+        "Total federal outlays - $ billion": "230.7",
+        "Total state/local outlays - $ billion": "0.0"
+    },
+    {
+        "Year": "1973",
+        "GDP - $ billion": "1428.5",
+        "Total federal outlays - $ billion": "245.7",
+        "Total state/local outlays - $ billion": "0.0"
+    },
+    {
+        "Year": "1974",
+        "GDP - $ billion": "1548.8",
+        "Total federal outlays - $ billion": "269.4",
+        "Total state/local outlays - $ billion": "0.0"
+    },
+    {
+        "Year": "1975",
+        "GDP - $ billion": "1688.9",
+        "Total federal outlays - $ billion": "332.3",
+        "Total state/local outlays - $ billion": "0.0"
+    },
+    {
+        "Year": "1976",
+        "GDP - $ billion": "1877.6",
+        "Total federal outlays - $ billion": "371.8",
+        "Total state/local outlays - $ billion": "0.0"
+    },
+    {
+        "Year": "1977",
+        "GDP - $ billion": "2086",
+        "Total federal outlays - $ billion": "409.2",
+        "Total state/local outlays - $ billion": "0.0"
+    },
+    {
+        "Year": "1978",
+        "GDP - $ billion": "2356.6",
+        "Total federal outlays - $ billion": "458.7",
+        "Total state/local outlays - $ billion": "0.0"
+    },
+    {
+        "Year": "1979",
+        "GDP - $ billion": "2632.1",
+        "Total federal outlays - $ billion": "504.0",
+        "Total state/local outlays - $ billion": "0.0"
+    },
+    {
+        "Year": "1980",
+        "GDP - $ billion": "2862.5",
+        "Total federal outlays - $ billion": "590.9",
+        "Total state/local outlays - $ billion": "0.0"
+    },
+    {
+        "Year": "1981",
+        "GDP - $ billion": "3211",
+        "Total federal outlays - $ billion": "678.2",
+        "Total state/local outlays - $ billion": "0.0"
+    },
+    {
+        "Year": "1982",
+        "GDP - $ billion": "3345",
+        "Total federal outlays - $ billion": "745.7",
+        "Total state/local outlays - $ billion": "0.0"
+    },
+    {
+        "Year": "1983",
+        "GDP - $ billion": "3638.1",
+        "Total federal outlays - $ billion": "808.4",
+        "Total state/local outlays - $ billion": "0.0"
+    },
+    {
+        "Year": "1984",
+        "GDP - $ billion": "4040.7",
+        "Total federal outlays - $ billion": "851.8",
+        "Total state/local outlays - $ billion": "0.0"
+    },
+    {
+        "Year": "1985",
+        "GDP - $ billion": "4346.7",
+        "Total federal outlays - $ billion": "946.3",
+        "Total state/local outlays - $ billion": "0.0"
+    },
+    {
+        "Year": "1986",
+        "GDP - $ billion": "4590.2",
+        "Total federal outlays - $ billion": "990.4",
+        "Total state/local outlays - $ billion": "0.0"
+    },
+    {
+        "Year": "1987",
+        "GDP - $ billion": "4870.2",
+        "Total federal outlays - $ billion": "1004.0",
+        "Total state/local outlays - $ billion": "0.0"
+    },
+    {
+        "Year": "1988",
+        "GDP - $ billion": "5252.6",
+        "Total federal outlays - $ billion": "1064.4",
+        "Total state/local outlays - $ billion": "0.0"
+    },
+    {
+        "Year": "1989",
+        "GDP - $ billion": "5657.7",
+        "Total federal outlays - $ billion": "1143.7",
+        "Total state/local outlays - $ billion": "0.0"
+    },
+    {
+        "Year": "1990",
+        "GDP - $ billion": "5979.6",
+        "Total federal outlays - $ billion": "1253.0",
+        "Total state/local outlays - $ billion": "0.0"
+    },
+    {
+        "Year": "1991",
+        "GDP - $ billion": "6174",
+        "Total federal outlays - $ billion": "1324.2",
+        "Total state/local outlays - $ billion": "0.0"
+    },
+    {
+        "Year": "1992",
+        "GDP - $ billion": "6539.3",
+        "Total federal outlays - $ billion": "1381.5",
+        "Total state/local outlays - $ billion": "1146.9"
+    },
+    {
+        "Year": "1993",
+        "GDP - $ billion": "6878.7",
+        "Total federal outlays - $ billion": "1409.4",
+        "Total state/local outlays - $ billion": "1210.1"
+    },
+    {
+        "Year": "1994",
+        "GDP - $ billion": "7308.8",
+        "Total federal outlays - $ billion": "1461.8",
+        "Total state/local outlays - $ billion": "1260.6"
+    },
+    {
+        "Year": "1995",
+        "GDP - $ billion": "7664.1",
+        "Total federal outlays - $ billion": "1515.7",
+        "Total state/local outlays - $ billion": "1347.8"
+    },
+    {
+        "Year": "1996",
+        "GDP - $ billion": "8100.2",
+        "Total federal outlays - $ billion": "1560.5",
+        "Total state/local outlays - $ billion": "1393.7"
+    },
+    {
+        "Year": "1997",
+        "GDP - $ billion": "8608.5",
+        "Total federal outlays - $ billion": "1601.1",
+        "Total state/local outlays - $ billion": "1456.9"
+    },
+    {
+        "Year": "1998",
+        "GDP - $ billion": "9089.2",
+        "Total federal outlays - $ billion": "1652.5",
+        "Total state/local outlays - $ billion": "1525.8"
+    },
+    {
+        "Year": "1999",
+        "GDP - $ billion": "9660.6",
+        "Total federal outlays - $ billion": "1701.8",
+        "Total state/local outlays - $ billion": "1622.1"
+    },
+    {
+        "Year": "2000",
+        "GDP - $ billion": "10284.8",
+        "Total federal outlays - $ billion": "1789.0",
+        "Total state/local outlays - $ billion": "1742.9"
+    },
+    {
+        "Year": "2001",
+        "GDP - $ billion": "10621.8",
+        "Total federal outlays - $ billion": "1862.9",
+        "Total state/local outlays - $ billion": "1891.9"
+    },
+    {
+        "Year": "2002",
+        "GDP - $ billion": "10977.5",
+        "Total federal outlays - $ billion": "2010.9",
+        "Total state/local outlays - $ billion": "2047.2"
+    },
+    {
+        "Year": "2003",
+        "GDP - $ billion": "11510.7",
+        "Total federal outlays - $ billion": "2159.9",
+        "Total state/local outlays - $ billion": "2164.2"
+    },
+    {
+        "Year": "2004",
+        "GDP - $ billion": "12274.9",
+        "Total federal outlays - $ billion": "2292.8",
+        "Total state/local outlays - $ billion": "2262.0"
+    },
+    {
+        "Year": "2005",
+        "GDP - $ billion": "13093.7",
+        "Total federal outlays - $ billion": "2472.0",
+        "Total state/local outlays - $ billion": "2363.7"
+    },
+    {
+        "Year": "2006",
+        "GDP - $ billion": "13855.9",
+        "Total federal outlays - $ billion": "2655.1",
+        "Total state/local outlays - $ billion": "2495.8"
+    },
+    {
+        "Year": "2007",
+        "GDP - $ billion": "14477.6",
+        "Total federal outlays - $ billion": "2728.7",
+        "Total state/local outlays - $ billion": "2659.1"
+    },
+    {
+        "Year": "2008",
+        "GDP - $ billion": "14718.6",
+        "Total federal outlays - $ billion": "2982.5",
+        "Total state/local outlays - $ billion": "2834.8"
+    },
+    {
+        "Year": "2009",
+        "GDP - $ billion": "14418.7",
+        "Total federal outlays - $ billion": "3517.7",
+        "Total state/local outlays - $ billion": "2989.0"
+    },
+    {
+        "Year": "2010",
+        "GDP - $ billion": "14964.4",
+        "Total federal outlays - $ billion": "3457.1",
+        "Total state/local outlays - $ billion": "3110.8"
+    },
+    {
+        "Year": "2011",
+        "GDP - $ billion": "15079.6",
+        "Total federal outlays - $ billion": "3603.1",
+        "Total state/local outlays - $ billion": "3155.3"
+    },
+    {
+        "Year": "2012",
+        "GDP - $ billion": "15601.5",
+        "Total federal outlays - $ billion": "3537.0",
+        "Total state/local outlays - $ billion": "3147.6"
+    },
+    {
+        "Year": "2013",
+        "GDP - $ billion": "16202.7",
+        "Total federal outlays - $ billion": "3454.7",
+        "Total state/local outlays - $ billion": "3118.1"
+    },
+    {
+        "Year": "2014",
+        "GDP - $ billion": "17011.4",
+        "Total federal outlays - $ billion": "3506.1",
+        "Total state/local outlays - $ billion": "3090.2"
+    },
+    {
+        "Year": "2015",
+        "GDP - $ billion": "17936.1",
+        "Total federal outlays - $ billion": "3758.6",
+        "Total state/local outlays - $ billion": "3113.7"
+    },
+    {
+        "Year": "2016",
+        "GDP - $ billion": "18934.2",
+        "Total federal outlays - $ billion": "3999.5",
+        "Total state/local outlays - $ billion": "3184.7"
+    },
+    {
+        "Year": "2017",
+        "GDP - $ billion": "19980",
+        "Total federal outlays - $ billion": "4217.8",
+        "Total state/local outlays - $ billion": "3301.0"
+    },
+    {
+        "Year": "2018",
+        "GDP - $ billion": "21024.8",
+        "Total federal outlays - $ billion": "4423.3",
+        "Total state/local outlays - $ billion": "3459.2"
+    },
+    {
+        "Year": "2019",
+        "GDP - $ billion": "21539.9",
+        "Total federal outlays - $ billion": "4652.6",
+        "Total state/local outlays - $ billion": "3656.5"
+    },
+    {
+        "Year": "2020",
+        "GDP - $ billion": "22476.4",
+        "Total federal outlays - $ billion": "4886.4",
+        "Total state/local outlays - $ billion": "3885.5"
+    },
+    {
+        "Year": ""
+    }
+]
