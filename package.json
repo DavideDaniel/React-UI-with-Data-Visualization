@@ -1,0 +1,25 @@
+{
+  "name": "react_d3_ui_project",
+  "version": "0.1.0",
+  "description": "modular and reusable ui project with react and d3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "d3",
+    "ui",
+    "reusable",
+    "modular"
+  ],
+  "author": "David Daniel <davidedaniel@gmail.com> (http://davidedaniel.github.io)",
+  "license": "ISC",
+  "dependencies": {
+    "d3": "^3.5.5",
+    "grunt": "^0.4.5",
+    "grunt-browserify": "^3.8.0",
+    "grunt-react": "^0.12.2",
+    "react": "^0.13.3"
+  }
+}
