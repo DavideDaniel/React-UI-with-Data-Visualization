@@ -22,19 +22,7 @@ ul li.focused{
     background-color:#23D4D5;
 }
 
-
-.bar {
+/* .bar {
   fill: #CB3837;
 }
-
-.selection ul {
-  margin: 0;
-  padding: 0;
-}
-
-.selection ul li {
-  display: inline;
-  text-decoration: none;
-  margin-left: 10px;
-  cursor: pointer;
-}
+ */
