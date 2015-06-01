@@ -1,4 +1,5 @@
 var React = require('react');
+var Menu = require('./Menu.jsx');
 var CurrentTime = require('./CurrentTime.jsx');
 var AppUptime = require('./AppUptime.jsx');
 var ServerUptime = require('./ServerUptime.jsx');
@@ -22,6 +23,12 @@ React.render(
 React.render(
   <ServerUptime />,
   document.getElementById('server-time')
+);
+
+
+React.render(
+    <Menu items={ ['Home', 'Time', 'Chart', 'Graph'] } />,
+    document.getElementById('menu')
 );
 
 window.setInterval(function () {

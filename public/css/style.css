@@ -1,0 +1,40 @@
+body{
+    font-family: helvetica, arial, sans-serif;
+}
+
+ul li{
+    /* display: inline-block; */
+    /* margin: 10px; */
+    padding: 10px 20px;
+    cursor:pointer;
+    background-color:#000;
+    color:#fff;
+    transition:0.3s;
+}
+
+ul li:hover{
+    background-color:#fff;
+    color: #000;
+}
+
+ul li.focused{
+    color:#fff;
+    background-color:#23D4D5;
+}
+
+
+.bar {
+  fill: #CB3837;
+}
+
+.selection ul {
+  margin: 0;
+  padding: 0;
+}
+
+.selection ul li {
+  display: inline;
+  text-decoration: none;
+  margin-left: 10px;
+  cursor: pointer;
+}
