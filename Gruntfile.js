@@ -2,7 +2,7 @@ module.exports = function (grunt) {
   grunt.initConfig({
     watch: {
       react: {
-        files: 'components/*.jsx',
+        files: './components/*.jsx',
         tasks: ['browserify']
       }
     },
@@ -11,8 +11,8 @@ module.exports = function (grunt) {
         transform: [require('grunt-react').browserify]
       },
       app: {
-        src: 'components/**/*.jsx',
-        dest: 'build/main.js'
+        src: './components/**/*.jsx',
+        dest: './build/main.js'
       }
     }
   });
