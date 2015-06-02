@@ -5,9 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "grunt;npm build; node uptimeServer.js; open index.html",
-    "build": "browserify -r d3 -r nvd3 > build/vendor.js;",
-    "postinstall": "bower install nvd3"
+    "start": "grunt; node uptimeServer.js && open index.html"
   },
   "keywords": [
     "react",
@@ -19,40 +17,19 @@
   "author": "David Daniel <davidedaniel@gmail.com> (http://davidedaniel.github.io)",
   "license": "ISC",
   "dependencies": {
-    "bower": "^1.4.1",
     "browserify": "^10.2.3",
-    "browserify-shim": "^3.8.7",
     "d3": "^3.5.5",
     "griddle-react": "^0.2.13",
     "grunt-browserify": "^3.8.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-react": "^0.12.2",
     "moment": "^2.10.3",
+    "path": "^0.11.14",
     "react": "^0.13.3",
-    "react-d3-components": "^0.4.8",
     "react-router": "^0.13.3",
     "underscore": "^1.8.3"
   },
-  "browserify": {
-    "transform": [
-      "browserify-shim"
-    ]
-  },
-  "browser": {
-    "d3": "./bower_components/d3/d3.js",
-    "nvd3": "./bower_components/nvd3/nv.d3.js"
-  },
-  "browserify-shim": {
-    "./bower_components/d3/d3.js": "d3",
-    "./bower_components/nvd3/nv.d3.js": {
-      "depends": [
-        "d3"
-      ],
-      "exports": "nv"
-    }
-  },
   "devDependencies": {
-    "browserify-shim": "^3.8.7",
     "grunt": "^0.4.5",
     "grunt-contrib-concat": "^0.5.1"
   }

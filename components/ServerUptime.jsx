@@ -15,8 +15,10 @@ module.exports = React.createClass({
   handleConnect: function(message){
     var msgObj = JSON.parse(message.data);
     console.log(msgObj);
-    if(msgObj.type === 'time-message'){
-      console.log(msgObj);
+    if(msgObj.type ==='data-message'){
+      console.log(msgObj.payload.data);
+    }
+    else if(msgObj.type === 'time-message'){
     var serverTotalTime = msgObj.payload.serverUptime;
     this.setState({serverUptime: serverTotalTime, seconds: msgObj.payload.seconds, loggedInTime: msgObj.payload.time});
     ws.send(message);}

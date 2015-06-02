@@ -1,5 +1,6 @@
 var WebSocketServer = require("ws").Server;
 var moment = require('moment');
+var fs = require('fs');
 var server = new WebSocketServer({
   port: 3000
 });
@@ -15,6 +16,26 @@ function serverUptime(startDate, loginTime) {
 
 server.on("connection", function (ws) {
   var timeNow = new Date();
+  var dataToSend;
+
+  function sendData(content) {
+    fs.readFile('utils/data.json', {
+      encoding: 'utf8'
+    }, function (err, data) {
+      if (err) throw err;
+      var dataToSend = data;
+      var newMessage = {
+        type: "data-message",
+        payload: {
+          from: "Server",
+          time: timeNow,
+          data: dataToSend
+        }
+      };
+      ws.send(JSON.stringify(newMessage));
+    });
+  }
+  sendData();
 
   function hello(timeSince) {
     var newMessage = {

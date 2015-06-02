@@ -2,7 +2,7 @@ body{
     font-family: helvetica, arial, sans-serif;
 }
 
-ul li{
+nav ul li {
     /* display: inline-block; */
     /* margin: 10px; */
     padding: 10px 20px;
@@ -11,6 +11,7 @@ ul li{
     color:#fff;
     transition:0.3s;
 }
+
 
 ul li:hover{
     background-color:#fff;
@@ -22,7 +23,6 @@ ul li.focused{
     background-color:#23D4D5;
 }
 
-/* .bar {
+.bar {
   fill: #CB3837;
 }
- */

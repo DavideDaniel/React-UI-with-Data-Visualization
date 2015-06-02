@@ -6,15 +6,14 @@ var ServerUptime = require('./ServerUptime.jsx');
 var moment = require('moment');
 var Transformer = require('../utils/Transformer');
 var gdpData = require('../utils/data.json');
-var Griddle = require('griddle-react');
-// var GraphStack = require('react-d3-components').BarChart;
-// var Graph = require('./Graph.jsx');
-// var Bar = require('./Bar.jsx');
-// var Rect = require('./Rect.jsx');
-// var Axis = require('./Axis.jsx');
-// var BarChart = require('./BarChart.jsx');
-// var BarGraph = require('./BarGraph.jsx');
-
+var Chart = require('griddle-react');
+var Bar = require('./Bar.jsx');
+var Rect = require('./Rect.jsx');
+var Axis = require('./Axis.jsx');
+var BarChart = require('./BarChart.jsx');
+var BarGraph = require('./BarGraph.jsx');
+var StackedBarGraph = require('./StackedBarGraph.jsx');
+var path = require('path');
 var timeTransform = new Transformer(function (date) {
   return moment(date).format('MM/DD hh:mm:ss a');
 });
@@ -26,12 +25,23 @@ React.render(<AppUptime startTime={new Date()}/>, document.getElementById('app-t
 React.render(<ServerUptime />, document.getElementById('server-time'));
 
 React.render(<Menu items={[
-    'Home', 'Time', 'Chart', 'GraphStack'
+    'Home', 'Time', 'Chart', 'Graph'
   ]}/>, document.getElementById('menu'));
 
-React.render(<Griddle columns={[
-    "Year", "GDP - $ billion", "Total federal outlays - $ billion", "Total state/local outlays - $ billion"
+React.render(<Chart columns={[
+    "Year", "GDP", "Federal outlays", "State outlays"
   ]} results={gdpData} showFilter={true} showSettings={true} tableClassName="table"/>, document.getElementById("chart"));
+
+  React.render(
+      <StackedBarGraph file={path.normalize("./results.csv")} dataKeys={['date','GDP','Federal','State']}/> ,
+      document.getElementById('bar-graph')
+  );
+
+  window.setInterval(function () {
+    ticker.setProps({
+      date: new Date()
+    });
+  }, 1000);
 
 // fData = [
 //   {
@@ -158,8 +168,3 @@ React.render(<Griddle columns={[
 // };
 //
 // React.render(<Graph data={frdata} title="Sample Fruits"/>, document.getElementById('graph'));
-window.setInterval(function () {
-  ticker.setProps({
-    date: new Date()
-  });
-}, 100);

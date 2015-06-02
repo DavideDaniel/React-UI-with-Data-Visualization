@@ -16,7 +16,6 @@ module.exports = React.createClass({
         clearInterval(this.timer);
   },
   tick: function() {
-    // var elapsedTime = moment.utc(this.state.elapsedTime).asMilliseconds.format("h:mm:ss");
     var timeNow = moment();
     var diffTimeSec = moment(timeNow.diff(this.props.startTime)).format('mm:ss');
     var timeSec = timeNow.diff(this.props.startTime, 'seconds')
