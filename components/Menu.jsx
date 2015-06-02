@@ -1,4 +1,9 @@
 var React = require('react');
+var Router = require('react-router');
+var Route = Router.Route;
+var NotFoundRoute = Router.NotFoundRoute;
+var DefaultRoute = Router.DefaultRoute;
+var Link = Router.Link;
 
 module.exports = React.createClass({
 
