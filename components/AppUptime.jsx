@@ -26,10 +26,9 @@ module.exports = React.createClass({
   render: function() {
 
     return (
-      <p>
+      <span className="Timers">
         App has been running for {this.state.elapsedTime}.
-        Total of {this.state.hours} hours, {this.state.mins} mins, {this.state.secs} seconds.
-      </p>
+      </span>
     );
   }
 });

@@ -18,7 +18,7 @@ module.exports = React.createClass({
     render: function() {
         var self = this;
         return (
-                <ul className="nav navbar-nav navbar-right">{ this.props.items.map(function(item, index){
+                <ul className="Menu-bar nav navbar-nav navbar-right">{ this.props.items.map(function(item, index){
                     var style = '';
                     if(self.state.focused == index){
                         style = 'focused';

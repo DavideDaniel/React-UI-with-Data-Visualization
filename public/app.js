@@ -199,9 +199,8 @@ module.exports = React.createClass({displayName: "exports",
   render: function() {
 
     return (
-      React.createElement("p", null, 
-        "App has been running for ", this.state.elapsedTime, "." + ' ' +
-        "Total of ", this.state.hours, " hours, ", this.state.mins, " mins, ", this.state.secs, " seconds."
+      React.createElement("span", {className: "Timers"}, 
+        "App has been running for ", this.state.elapsedTime, "."
       )
     );
   }
@@ -473,160 +472,159 @@ return this.props.dateTransform.getTransformedValue(this.props.date);
 },
 render: function () {
   return (
-    React.createElement("div", {className: "TimerBox"}, 
-    React.createElement("span", null, "Current time: ", this.getTime())
-    )
+    React.createElement("span", {className: "Timers"}, "Current time: ", this.getTime())
     );
 }
 });
 
 },{"../utils/Transformer":384,"./SetIntervalMixin.jsx":15,"moment":188,"react":382}],9:[function(require,module,exports){
-// var React = require('react');
-// var d3 = require('d3');
-//
-// function createChart(dom, props){
-//   var width = props.width;
-//   var height = props.height;
-//   width = width + 200;
-//
-//   var data = props.data;
-//   var sum = data.reduce(function(memo, num){ return memo + num.count; }, 0);
-//
-//   var chart = d3.select(dom).append('svg').attr('class', 'd3').attr('width', width).attr('height', height)
-//         .append("g")
-//           .attr("transform", "translate(" + (props.width/2) + "," + (height/2) + ")");
-//
-//   var outerRadius = props.width/2.2;
-//   var innerRadius = props.width/8;
-//   var arc = d3.svg.arc()
-//       .outerRadius(outerRadius)
-//       .innerRadius(innerRadius);
-//
-//   var colors = ['#447FD3', '#CB3837'];
-//   var pie = d3.layout.pie()
-//       .value(function (d) { return d.count; });
-//
-//   var g = chart.selectAll(".arc")
-//         .data(pie(data))
-//         .enter().append("g")
-//         .attr("class", "arc")
-//         .on("click", function(d) {
-//           // alert('you clicked ' + d.data.name)
-//         })
-//         .on('mouseover', function (d, i) {
-//           d3.select(this)
-//             .transition()
-//             .duration(500)
-//             .ease('bounce')
-//             .attr('transform', function (d) {
-//               var dist = 10;
-//               d.midAngle = ((d.endAngle - d.startAngle) / 2) + d.startAngle;
-//               var x = Math.sin(d.midAngle) * dist;
-//               var y = -Math.cos(d.midAngle) * dist;
-//               return 'translate(' + x + ',' + y + ')';
-//             });
-//           d3.select(this).append("text").style("fill", function(d) { return colors[i]; }).attr("id", "percent")
-//           .attr('transform', "translate(0,-5)")
-//           .attr("text-anchor", "middle").attr("dy", ".35em").style("font", "bold 15px Arial")
-//           .text(function(d) { return (((d.data.count/d.data.name)*100).toFixed(1) + " %"); });
-//           g.filter(function(e) { return e.value != d.value; }).style('opacity',0.5);
-//         }).on('mouseout', function (d, i) {
-//             d3.select(this)
-//             .transition()
-//             .duration(500)
-//             .ease('easeOut')
-//             .attr('transform', 'translate(0,0)');
-//             d3.select("#percent").remove();
-//             g.filter(function(e) { return e.value != d.value; }).style('opacity',1)
-//           });
-//
-//   g.append("path")
-//     .style("fill", function(d, i) { return colors[i]; })
-//     .transition().delay(function(d, i) { return i * 300; }).duration(400)
-//     .attrTween('d', function(d) {
-//          var i = d3.interpolate(d.startAngle, d.endAngle);
-//          return function(t) {
-//              d.endAngle = i(t);
-//            return arc(d);
-//          }
-//     });
-//
-//
-//   var center =
-//   g.filter(function(d) { return d.endAngle - d.startAngle > .1; }).append("text").style("fill", "white")
-//     .attr('transform', function(d){
-//       return "translate(" + arc.centroid(d) + ")";
-//     })
-//     .attr("text-anchor", "middle").attr("dy", ".35em")
-//     .text(function(d) { return d.value; });
-//
-//     var legend = chart.selectAll(".legend")
-//     .data(data)
-//     .enter().append("g")
-//     .attr("class", "legend")
-//     .attr("transform", function (d, i) {
-//     return "translate(150," + (-i * 20) + ")";
-//     });
-//
-//     var rect = legend.append("rect")
-//         .attr("width", 18)
-//         .attr("height", 18)
-//         .style("fill", function(d, i) { return colors[i]; }).style('opacity', 0);
-//
-//     var name = legend.append("text")
-//         .attr("x", 24)
-//         .attr("y", 12)
-//         .text(function (d) {
-//           var text = d.name;
-//           if(text.length >30){
-//             text = text.substring(0,26);
-//             text = text + '...';
-//           }
-//         return text;
-//     }).style('opacity', 0);
-//
-//     rect.transition().delay(function(d, i) { return i * 400; }).duration(1000).style('opacity',1);
-//
-//     name.transition().delay(function(d, i) { return i * 400; }).duration(1000).style('opacity',1);
-//
-// };
-//
-// module.exports= React.createClass({
-//     propTypes: {
-//       width: React.PropTypes.number,
-//       height: React.PropTypes.number,
-//       title: React.PropTypes.string,
-//       data: React.PropTypes.array.isRequired,
-//     },
-//
-//     getDefaultProps: function() {
-//       return {
-//         width: 300,
-//         height: 350,
-//         title: '',
-//         Legend: true,
-//       };
-//     },
-//
-//     render: function() {
-//       return (
-//         <div>
-//           <h4> {this.props.title} </h4>
-//         </div>
-//       );
-//     },
-//     componentDidMount: function() {
-//       var dom =  this.getDOMNode();
-//       createChart(dom, this.props);
-//     },
-//     shouldComponentUpdate: function() {
-//         var dom =  this.getDOMNode();
-//         createChart(dom, this.props);
-//         return false;
-//     }
-//   });
+var React = require('react');
+var d3 = require('d3');
 
-},{}],10:[function(require,module,exports){
+function createChart(dom, props){
+  var width = props.width;
+  var height = props.height;
+  width = width + 200;
+
+  var data = props.data;
+  var sum = data.reduce(function(memo, num){ return memo + num.count; }, 0);
+
+  var chart = d3.select(dom).append('svg').attr('class', 'd3').attr('width', width).attr('height', height)
+        .append("g")
+          .attr("transform", "translate(" + (props.width/2) + "," + (height/2) + ")");
+
+  var outerRadius = props.width/2.2;
+  var innerRadius = props.width/8;
+  var arc = d3.svg.arc()
+      .outerRadius(outerRadius)
+      .innerRadius(innerRadius);
+
+  var colors = ['#447FD3', '#CB3837', 'pink'];
+
+  var pie = d3.layout.pie()
+      .value(function (d) { return d.count; });
+
+  var g = chart.selectAll(".arc")
+        .data(pie(data))
+        .enter().append("g")
+        .attr("class", "arc")
+        .on("click", function(d) {
+          // alert('you clicked ' + d.data.name)
+        })
+        .on('mouseover', function (d, i) {
+          d3.select(this)
+            .transition()
+            .duration(500)
+            .ease('bounce')
+            .attr('transform', function (d) {
+              var dist = 10;
+              d.midAngle = ((d.endAngle - d.startAngle) / 2) + d.startAngle;
+              var x = Math.sin(d.midAngle) * dist;
+              var y = -Math.cos(d.midAngle) * dist;
+              return 'translate(' + x + ',' + y + ')';
+            });
+          d3.select(this).append("text").style("fill", function(d) { return colors[i]; }).attr("id", "percent")
+          .attr('transform', "translate(0,-5)")
+          .attr("text-anchor", "middle").attr("dy", ".35em").style("font", "bold 15px Arial")
+          .text(function(d) { return (((d.data.count/d.data.name)*100).toFixed(1) + " %"); });
+          g.filter(function(e) { return e.value != d.value; }).style('opacity',0.5);
+        }).on('mouseout', function (d, i) {
+            d3.select(this)
+            .transition()
+            .duration(500)
+            .ease('easeOut')
+            .attr('transform', 'translate(0,0)');
+            d3.select("#percent").remove();
+            g.filter(function(e) { return e.value != d.value; }).style('opacity',1)
+          });
+
+  g.append("path")
+    .style("fill", function(d, i) { return colors[i]; })
+    .transition().delay(function(d, i) { return i * 300; }).duration(400)
+    .attrTween('d', function(d) {
+         var i = d3.interpolate(d.startAngle, d.endAngle);
+         return function(t) {
+             d.endAngle = i(t);
+           return arc(d);
+         }
+    });
+
+
+  var center =
+  g.filter(function(d) { return d.endAngle - d.startAngle > .1; }).append("text").style("fill", "white")
+    .attr('transform', function(d){
+      return "translate(" + arc.centroid(d) + ")";
+    })
+    .attr("text-anchor", "middle").attr("dy", ".35em")
+    .text(function(d) { return d.value; });
+
+    var legend = chart.selectAll(".legend")
+    .data(data)
+    .enter().append("g")
+    .attr("class", "legend")
+    .attr("transform", function (d, i) {
+    return "translate(150," + (-i * 20) + ")";
+    });
+
+    var rect = legend.append("rect")
+        .attr("width", 18)
+        .attr("height", 18)
+        .style("fill", function(d, i) { return colors[i]; }).style('opacity', 0);
+
+    var name = legend.append("text")
+        .attr("x", 24)
+        .attr("y", 12)
+        .text(function (d) {
+          var text = d.name;
+          if(text.length >30){
+            text = text.substring(0,26);
+            text = text + '...';
+          }
+        return text;
+    }).style('opacity', 0);
+
+    rect.transition().delay(function(d, i) { return i * 400; }).duration(1000).style('opacity',1);
+
+    name.transition().delay(function(d, i) { return i * 400; }).duration(1000).style('opacity',1);
+
+};
+
+module.exports= React.createClass({displayName: "exports",
+    propTypes: {
+      width: React.PropTypes.number,
+      height: React.PropTypes.number,
+      title: React.PropTypes.string,
+      data: React.PropTypes.array.isRequired,
+    },
+
+    getDefaultProps: function() {
+      return {
+        width: 300,
+        height: 350,
+        title: '',
+        Legend: true,
+      };
+    },
+
+    render: function() {
+      return (
+        React.createElement("div", null, 
+          React.createElement("h4", null, " ", this.props.title, " ")
+        )
+      );
+    },
+    componentDidMount: function() {
+      var dom =  this.getDOMNode();
+      createChart(dom, this.props);
+    },
+    shouldComponentUpdate: function() {
+        var dom =  this.getDOMNode();
+        createChart(dom, this.props);
+        return false;
+    }
+  });
+
+},{"d3":172,"react":382}],10:[function(require,module,exports){
 var React = require('react');
 var Router = require('react-router');
 var Route = Router.Route;
@@ -647,7 +645,7 @@ module.exports = React.createClass({displayName: "exports",
     render: function() {
         var self = this;
         return (
-                React.createElement("ul", {className: "nav navbar-nav navbar-right"},  this.props.items.map(function(item, index){
+                React.createElement("ul", {className: "Menu-bar nav navbar-nav navbar-right"},  this.props.items.map(function(item, index){
                     var style = '';
                     if(self.state.focused == index){
                         style = 'focused';
@@ -781,8 +779,9 @@ var App = React.createClass({displayName: "App",
     return (
       React.createElement("div", null, 
         React.createElement(Menu, {items: [
-          React.createElement(Link, {to: "homePage"}, "Home"), React.createElement(Link, {to: "timerNow"}, "Timers"), React.createElement(Link, {to: "chartPage"}, "Chart"), React.createElement(Link, {to: "graphPage"}, "Graph")
+          React.createElement(Link, {to: "homePage"}, "Home"), React.createElement(Link, {to: "chartPage"}, "Chart"), React.createElement(Link, {to: "graphPage"}, "Graph")
           ]}), 
+
         React.createElement(RouteHandler, null)
       )
     );
@@ -792,19 +791,22 @@ var App = React.createClass({displayName: "App",
 var Home = React.createClass({displayName: "Home",
   render: function () {
     return (
+      React.createElement("div", null, 
       React.createElement("h3", null, "Sendence")
+      )
     );
   }
 });
 
 
-var ChartMenu = React.createClass({displayName: "ChartMenu",
+var DataMenu = React.createClass({displayName: "DataMenu",
   render: function () {
     return (
       React.createElement("div", null, 
-        React.createElement("h2", null, "Chart Menu"), 
+        React.createElement("h2", null, "Data"), 
         React.createElement(RouteHandler, null), 
-          React.createElement("li", null, React.createElement(Link, {to: "chartPage"}, "Chart"))
+          React.createElement("li", null, React.createElement(Link, {to: "chartPage"}, "Chart")), 
+          React.createElement("li", null, React.createElement(Link, {to: "graphPage"}, "Graph"))
       )
     );
   }
@@ -818,7 +820,6 @@ var Chart_Page = React.createClass({displayName: "Chart_Page",
         React.createElement(Chart, {columns: [
             "Year", "GDP", "Federal outlays", "State outlays"
           ], results: gdpData, showFilter: true, showSettings: true, tableClassName: "table"})
-
       )
     );
   }
@@ -829,54 +830,10 @@ var Graph_Page = React.createClass({displayName: "Graph_Page",
     return (
       React.createElement("div", {id: "graph"}, 
       React.createElement("h3", null, "Graph Page"), 
-        React.createElement(StackedBarGraph, {file: path.normalize("./results.csv"), dataKeys: ['date','GDP','Federal','State']})
+        React.createElement(StackedBarGraph, {
+          title: "GDP, Federal & State outlays", 
+          file: path.normalize("./results.csv"), dataKeys: ['date','GDP','Federal','State']})
       )
-    );
-  }
-});
-
-var TimerMenu = React.createClass({displayName: "TimerMenu",
-  render: function () {
-    return (
-      React.createElement("div", null, 
-        React.createElement("h2", null, "Timers"), 
-        React.createElement(RouteHandler, null), 
-          React.createElement("li", null, React.createElement(Link, {to: "timerNow"}, "Timers"))
-
-
-      )
-    );
-  }
-});
-
-var Timer_Now = React.createClass({displayName: "Timer_Now",
-  timeTransform : new Transformer(function (date) {
-    return moment(date).format('MM/DD hh:mm:ss a');
-  }),
-
-  tock: function () {
-    window.setInterval(setProps({date: new Date()}),1000)},
-
-  render: function () {
-    return (
-      React.createElement("div", null, 
-      React.createElement("h3", null, "Current Time"), 
-      React.createElement("div", {id: "current-time"}, 
-        React.createElement(CurrentTime, {dateTransform: this.timeTransform})
-      )
-      )
-    );
-  }
-});
-
-var Timer_Uptime = React.createClass({displayName: "Timer_Uptime",
-  render: function () {
-    return (
-      React.createElement("div", null, 
-      React.createElement("h3", null, "Uptimes"), 
-        React.createElement(AppUptime, {startTime: new Date()}), 
-        React.createElement(ServerUptime, null)
-        )
     );
   }
 });
@@ -884,12 +841,7 @@ var Timer_Uptime = React.createClass({displayName: "Timer_Uptime",
 var routes = (
   React.createElement(Route, {handler: App}, 
     React.createElement(Route, {name: "homePage", handler: Home}), 
-    React.createElement(Route, {handler: TimerMenu}, 
-
-      React.createElement(Route, {name: "timerNow", handler: Timer_Now}), 
-      React.createElement(Route, {name: "uptimePage", handler: Timer_Uptime})
-    ), 
-    React.createElement(Route, {handler: ChartMenu}, 
+    React.createElement(Route, {handler: DataMenu}, 
       React.createElement(Route, {name: "chartPage", handler: Chart_Page}), 
       React.createElement(Route, {name: "graphPage", handler: Graph_Page})
     )
@@ -897,8 +849,21 @@ var routes = (
 
 );
 
+var timeTransform = new Transformer(function (date) {
+  return moment(date).format('MM/DD hh:mm:ss a');
+});
+
+var ticker = React.render(React.createElement(CurrentTime, {dateTransform: timeTransform}), document.getElementById('current-time'));
+window.setInterval(function () {
+    ticker.setProps({
+      date: new Date()
+    });
+  }, 1000);
+
+React.render(React.createElement(AppUptime, {startTime: new Date()}), document.getElementById('app-time'));
+React.render(React.createElement(ServerUptime, null), document.getElementById('server-time'));
 Router.run(routes, function (Handler) {
-  React.render(React.createElement(Handler, null), document.body);
+React.render(React.createElement(Handler, null), document.getElementById('Routed'));
 });
 
 },{"../utils/Transformer":384,"../utils/data.json":385,"./AppUptime.jsx":2,"./CurrentTime.jsx":8,"./Menu.jsx":10,"./ServerUptime.jsx":14,"./StackedBarGraph.jsx":16,"griddle-react":184,"moment":188,"path":186,"react":382,"react-router":213}],14:[function(require,module,exports){
@@ -932,9 +897,12 @@ module.exports = React.createClass({displayName: "exports",
   },
   render: function() {
     var serverUptime = moment(this.state.serverUptime).format('MM/DD hh:mm:ss a');
+    var mins = Math.floor(this.state.seconds/60);
+    var logTime = moment(this.state.loggedInTime).format('MM/DD hh:mm:ss a');
     return (
-      React.createElement("p", null, 
-        "Server has been running since ", serverUptime, "."
+      React.createElement("span", {className: "Timers"}, 
+        "Server has been up since ", serverUptime, "." + ' ' +
+        "You logged in at ", logTime, " and have been connected for ", mins, " mins."
       )
     );
   }
@@ -960,78 +928,136 @@ var d3 = require('d3');
 function createChart(dom, props) {
   var width = props.width;
   var height = props.height;
-  var pad = [20, 50, 30, 20];
-  var x = d3.scale.ordinal().rangeRoundBands([0, width - pad[1] - pad[3]]);
-  var y = d3.scale.linear().range([0, height - pad[0] - pad[2]]);
-  var z = d3.scale.ordinal().range(["lightpink", "darkgray", "lightblue"]);
+  var pad = [
+    20, 50, 30, 20
+  ];
+  var x = d3.scale.ordinal().rangeRoundBands([
+    0, width - pad[1] - pad[3]
+  ]);
+  var y = d3.scale.linear().range([
+    0, height - pad[0] - pad[2]
+  ]);
+  var color = d3.scale.ordinal().range([
+    "#447FD3", "#CB3837", "#1BABD4"
+  ]);
   var parse = d3.time.format("%m/%Y").parse;
   var format = d3.time.format("%y");
 
   var svg = d3.select(dom).append("svg:svg").attr("width", width).attr("height", height).append("svg:g").attr("transform", "translate(" + pad[3] + "," + (height - pad[2]) + ")");
 
+  d3.csv(props.file, function (err, results) {
+    if (err) {
+      console.error(err);
+    }
+    var issues = d3.layout.stack()([
+      props.dataKeys[1], props.dataKeys[2], props.dataKeys[3]
+    ].map(function (issue) {
+      return results.map(function (d) {
+        return {
+          x: parse(d.date),
+          y: + d[issue]
+        };
+      });
+    }));
 
-  d3.csv(props.file, function(err,results){
-    if(err){console.error(err);}
-  var stacks = d3.layout.stack()([props.dataKeys[1], props.dataKeys[2], props.dataKeys[3]].map(function(stackBar) {
-    return results.map(function(d) {
-      return {x: parse(d.date), y: +d[stackBar]};
+    x.domain(issues[0].map(function (d) {
+      return d.x;
+    }));
+    y.domain([
+      0, d3.max(issues[issues.length - 1], function (d) {
+        return d.y0 + d.y;
+      })
+    ]);
+
+    var issue = svg.selectAll("g.issue").data(issues).enter().append("svg:g").attr("class", "issue").style("fill", function (d, i) {
+      return color(i);
+    }).style("stroke", function (d, i) {
+      return d3.rgb(color(i)).darker();
     });
-  }));
 
-  x.domain(stacks[0].map(function(d) { return d.x; }));
-  y.domain([0, d3.max(stacks[stacks.length - 1], function(d) { return d.y0 + d.y; })]);
+    var rect = issue.selectAll("rect")
+    .data(Object)
+    .enter()
+    .append("svg:rect")
+    .attr("x", function (d) {
+      return x(d.x);
+    })
+    .attr("y", function (d) {
+      return -y(d.y0) - y(d.y);
+    })
+    .attr("height", function (d) {
+      return y(d.y);
+    })
+    .attr("width", x.rangeBand())
+    .on('mouseover', function(d,i){
 
-  var stackBar = svg.selectAll("g.stackBar")
-      .data(stacks)
-    .enter().append("svg:g")
-      .attr("class", "stackBar")
-      .style("fill", function(d, i) { return z(i); })
-      .style("stroke", function(d, i) { return d3.rgb(z(i)).darker(); });
+      d3.select(this)
+      .append("text")
+        .attr("id", "percent")
+        .attr("text-anchor", "middle")
+        .attr("dy", ".35em")
+        .style("font", "bold 10px")
+        .text(function(d){
+          return (((d.y0/d.y)*100).toFixed(1)+"%");
+        });
+      })
+      .on('mouseout', function (d, i){
 
-      var rect = stackBar.selectAll("rect")
-      .data(Object)
-    .enter().append("svg:rect")
-      .attr("x", function(d) { return x(d.x); })
-      .attr("y", function(d) { return -y(d.y0) - y(d.y); })
-      .attr("height", function(d) { return y(d.y); })
-      .attr("width", x.rangeBand());
+        d3.select("#percent").remove();
+      });
 
-      var label = svg.selectAll("text")
-      .data(x.domain())
-    .enter().append("svg:text")
-      .attr("x", function(d) { return x(d) + x.rangeBand() / 2; })
-      .attr("y", 6)
-      .attr("text-anchor", "middle")
-      .attr("dy", ".71em")
-      .text(format);
+    var label = svg.selectAll("text")
+    .data(x.domain())
+    .enter()
+    .append("svg:text")
+    .attr("x", function (d) {
+      return x(d) + x.rangeBand() / 2;
+    })
+    .attr("y", 6)
+    .attr("text-anchor", "middle")
+    .attr("dy", ".71em").text(format)
+    .attr("font-size", "9px");
 
-      var rule = svg.selectAll("g.rule")
-      .data(y.ticks(5))
-    .enter().append("svg:g")
-      .attr("class", "rule")
-      .attr("transform", function(d) { return "translate(0," + -y(d) + ")"; });
+    var rule = svg.selectAll("g.rule").data(y.ticks(5)).enter().append("svg:g").attr("class", "rule").attr("transform", function (d) {
+      return "translate(0," + -y(d) + ")";
+    });
 
-  rule.append("svg:line")
-      .attr("x2", width - pad[1] - pad[3])
-      .style("stroke", function(d) { return d ? "#fff" : "#000"; })
-      .style("stroke-opacity", function(d) { return d ? .7 : null; });
+    rule.append("svg:line").attr("x2", width - pad[1] - pad[3]).style("stroke", function (d) {
+      return d ? "#fff" : "#000";
+    }).style("stroke-opacity", function (d) {
+      return d ? .7 : null;
+    });
 
-  rule.append("svg:text")
-      .attr("x", width - pad[1] - pad[3] + 6)
-      .attr("dy", ".35em")
-      .text(d3.format(",y"));
-});
-};
+    rule.append("svg:text").attr("x", width - pad[1] - pad[3] + 6).attr("dy", ".35em").text(d3.format(",y"));
+
+    var tooltip = svg.append("g")
+  .attr("class", "tooltip")
+  .style("display", "none");
+
+tooltip.append("rect")
+  .attr("width", 30)
+  .attr("height", 20)
+  .attr("fill", "white")
+  .style("opacity", 0.5);
+
+tooltip.append("text")
+  .attr("x", 15)
+  .attr("dy", "1.2em")
+  .style("text-anchor", "middle")
+  .attr("font-size", "12px")
+  .attr("font-weight", "bold");
+  });
+
+}
 
 module.exports = React.createClass({displayName: "exports",
   propTypes: {
     width: React.PropTypes.number,
     height: React.PropTypes.number,
     title: React.PropTypes.string,
-    data: React.PropTypes.array.isRequired,
-    dataKeys: React.PropTypes.array,
+    dataKeys: React.PropTypes.array
   },
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
       width: 960,
       height: 500,
@@ -1041,25 +1067,27 @@ module.exports = React.createClass({displayName: "exports",
       Legend: true
     };
   },
+
+  filter: function () {},
   render: function () {
     return (
-      React.createElement("div", {className: "StackedBar"}, 
+      React.createElement("div", {className: "StackedBarGraph"}, 
         React.createElement("h4", null, this.props.title), 
-              React.createElement("div", {className: "selection"}, 
-                React.createElement("ul", null, 
-                  React.createElement("li", {onClick: this.filter}, "GDP in $ billions"), 
-                  React.createElement("li", {onClick: this.byFed}, "Total Federal spending in $ billions"), 
-                  React.createElement("li", {onClick: this.byState}, "Total State spending in $ billions")
-                )
-              )
+        React.createElement("div", {className: "selection"}, 
+          React.createElement("ul", null, 
+            React.createElement("li", {onClick: this.filter}, "GDP in $ billions"), 
+            React.createElement("li", {onClick: this.byFed}, "Total Federal spending in $ billions"), 
+            React.createElement("li", {onClick: this.byState}, "Total State spending in $ billions")
+          )
+        )
       )
     );
   },
-  componentDidMount: function(){
+  componentDidMount: function () {
     var dom = this.getDOMNode();
-    createChart(dom,this.props);
+    createChart(dom, this.props);
   },
-  shouldComponentUpdate: function(){
+  shouldComponentUpdate: function () {
     var dom = this.getDOMNode();
     createChart(dom, this.props);
     return false;

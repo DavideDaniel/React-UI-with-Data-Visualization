@@ -15,9 +15,7 @@ return this.props.dateTransform.getTransformedValue(this.props.date);
 },
 render: function () {
   return (
-    <div className="TimerBox">
-    <span>Current time: {this.getTime()}</span>
-    </div>
+    <span className="Timers">Current time: {this.getTime()}</span>
     );
 }
 });

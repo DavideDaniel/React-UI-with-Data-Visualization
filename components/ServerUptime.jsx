@@ -28,10 +28,13 @@ module.exports = React.createClass({
   },
   render: function() {
     var serverUptime = moment(this.state.serverUptime).format('MM/DD hh:mm:ss a');
+    var mins = Math.floor(this.state.seconds/60);
+    var logTime = moment(this.state.loggedInTime).format('MM/DD hh:mm:ss a');
     return (
-      <p>
-        Server has been running since {serverUptime}.
-      </p>
+      <span className="Timers">
+        Server has been up since {serverUptime}.
+        You logged in at {logTime} and have been connected for {mins} mins.
+      </span>
     );
   }
 });

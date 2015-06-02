@@ -26,8 +26,9 @@ var App = React.createClass({
     return (
       <div>
         <Menu items={[
-          <Link to="homePage">Home</Link>, <Link to="timerNow">Timers</Link>, <Link to="chartPage">Chart</Link>, <Link to="graphPage">Graph</Link>
+          <Link to="homePage">Home</Link>, <Link to="chartPage">Chart</Link>, <Link to="graphPage">Graph</Link>
           ]}/>
+
         <RouteHandler/>
       </div>
     );
@@ -37,19 +38,22 @@ var App = React.createClass({
 var Home = React.createClass({
   render: function () {
     return (
+      <div>
       <h3>Sendence</h3>
+      </div>
     );
   }
 });
 
 
-var ChartMenu = React.createClass({
+var DataMenu = React.createClass({
   render: function () {
     return (
       <div>
-        <h2>Chart Menu</h2>
+        <h2>Data</h2>
         <RouteHandler/>
           <li><Link to="chartPage">Chart</Link></li>
+          <li><Link to="graphPage">Graph</Link></li>
       </div>
     );
   }
@@ -63,7 +67,6 @@ var Chart_Page = React.createClass({
         <Chart columns={[
             "Year", "GDP", "Federal outlays", "State outlays"
           ]} results={gdpData} showFilter={true} showSettings={true} tableClassName="table"/>
-
       </div>
     );
   }
@@ -74,54 +77,10 @@ var Graph_Page = React.createClass({
     return (
       <div id="graph">
       <h3>Graph Page</h3>
-        <StackedBarGraph file={path.normalize("./results.csv")} dataKeys={['date','GDP','Federal','State']}/>
+        <StackedBarGraph
+          title={"GDP, Federal & State outlays"
+          } file={path.normalize("./results.csv")} dataKeys={['date','GDP','Federal','State']}/>
       </div>
-    );
-  }
-});
-
-var TimerMenu = React.createClass({
-  render: function () {
-    return (
-      <div>
-        <h2>Timers</h2>
-        <RouteHandler/>
-          <li><Link to="timerNow">Timers</Link></li>
-
-
-      </div>
-    );
-  }
-});
-
-var Timer_Now = React.createClass({
-  timeTransform : new Transformer(function (date) {
-    return moment(date).format('MM/DD hh:mm:ss a');
-  }),
-
-  tock: function () {
-    window.setInterval(setProps({date: new Date()}),1000)},
-
-  render: function () {
-    return (
-      <div>
-      <h3>Current Time</h3>
-      <div id="current-time">
-        <CurrentTime dateTransform={this.timeTransform}/>
-      </div>
-      </div>
-    );
-  }
-});
-
-var Timer_Uptime = React.createClass({
-  render: function () {
-    return (
-      <div>
-      <h3>Uptimes</h3>
-        <AppUptime startTime={new Date()}/>
-        <ServerUptime />
-        </div>
     );
   }
 });
@@ -129,12 +88,7 @@ var Timer_Uptime = React.createClass({
 var routes = (
   <Route handler={App}>
     <Route name="homePage" handler={Home}></Route>
-    <Route handler={TimerMenu}>
-
-      <Route name="timerNow" handler={Timer_Now}></Route>
-      <Route name="uptimePage" handler={Timer_Uptime}></Route>
-    </Route>
-    <Route handler={ChartMenu}>
+    <Route handler={DataMenu}>
       <Route name="chartPage" handler={Chart_Page}></Route>
       <Route name="graphPage" handler={Graph_Page}></Route>
     </Route>
@@ -142,6 +96,19 @@ var routes = (
 
 );
 
+var timeTransform = new Transformer(function (date) {
+  return moment(date).format('MM/DD hh:mm:ss a');
+});
+
+var ticker = React.render(<CurrentTime dateTransform={timeTransform}/>, document.getElementById('current-time'));
+window.setInterval(function () {
+    ticker.setProps({
+      date: new Date()
+    });
+  }, 1000);
+
+React.render(<AppUptime startTime={new Date()}/>, document.getElementById('app-time'));
+React.render(<ServerUptime />, document.getElementById('server-time'));
 Router.run(routes, function (Handler) {
-  React.render(<Handler/>, document.body);
+React.render(<Handler/>, document.getElementById('Routed'));
 });
