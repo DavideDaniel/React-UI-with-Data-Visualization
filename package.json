@@ -19,6 +19,7 @@
   "dependencies": {
     "browserify": "^10.2.3",
     "chartist": "^0.8.0",
+    "cors": "^2.7.1",
     "d3": "^3.5.5",
     "express": "^4.12.4",
     "griddle-react": "^0.2.13",
