@@ -3,7 +3,8 @@ React UI with d3 &amp; chartist
 
 ### To run
 `$ npm install` - install dependencies
-`$ npm start` - runs the grunt task, browserify the app and launch the websocket server
+
+`$ npm start` - runs the grunt task to convert the JSX, browserify the app and launch the websocket server
 
 
 ### What this does...
