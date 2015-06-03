@@ -1,6 +1,6 @@
 var React = require('react');
 var moment = require('moment');
-var ws = new WebSocket("ws://localhost:3000");
+var ws = new WebSocket("ws://104.131.179.211:3000");
 
 module.exports = React.createClass({
   getInitialState: function () {
