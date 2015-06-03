@@ -101,8 +101,8 @@ module.exports = React.createClass({
   },
   getDefaultProps: function () {
     return {
-      width: 960,
-      height: 500,
+      width: 900,
+      height: 450,
       title: '',
       file: '',
       dataKeys: '',
@@ -110,16 +110,18 @@ module.exports = React.createClass({
     };
   },
 
-  filter: function () {},
+  // TODO filter function for datasets
+  // filter: function () {},
+
   render: function () {
     return (
       <div className="StackedBarGraph">
         <h4>{this.props.title}</h4>
-          <ul className="selection">
-            <li onClick={this.filter}>GDP in $ billions</li>
-            <li onClick={this.byFed}>Total Federal spending in $ billions</li>
-            <li onClick={this.byState}>Total State spending in $ billions</li>
-          </ul>
+        <ul className="selection">
+          <li onClick={this.filter}>GDP in $ billions</li>
+          <li onClick={this.byFed}>Total Federal spending in $ billions</li>
+          <li onClick={this.byState}>Total State spending in $ billions</li>
+        </ul>
       </div>
     );
   },

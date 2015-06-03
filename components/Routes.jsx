@@ -28,7 +28,7 @@ var App = React.createClass({
       <div>
         <Menu items={[
           < Link to = "homePage" > Home < /Link>, <Link to="chartPage">Chart</Link >, < Link to = "graphPage" > Graph < /Link>
-                                  ]}/>
+                                              ]}/>
         <RouteHandler/>
       </div>
     );
@@ -39,7 +39,20 @@ var Home = React.createClass({
   render: function () {
     return (
       <div>
-        <h3>Sendence</h3>
+        <h3>Home Page</h3>
+        <p>Navigate through the menu to access data on GDP & government spending. All data has been pulled from <a href="www.usgovernmentspending.com/">usgovernmentspending.com</a>.</p>
+
+        <p>Things I used to build this were:</p>
+        <ul className="listOtech">
+          <li><a href="https://facebook.github.io/react/docs/why-react.html">React.js</a></li>
+          <li><a href="http://d3js.org/">d3.js</a></li>
+          <li><a href="https://nodejs.org/">Node.js</a></li>
+          <li><a href="http://gruntjs.com/">Grunt.js</a></li>
+          <li><a href="http://momentjs.com/">Moment.js</a></li>
+          <li><a href="http://browserify.org/">Browserify</a></li>
+          <li><a href="http://griddlegriddle.github.io/Griddle/">Griddle</a></li>
+        </ul>
+        <p>Hey! That's a lotta Javascript!!</p>
       </div>
     );
   }

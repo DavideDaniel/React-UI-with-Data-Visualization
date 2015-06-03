@@ -52,3 +52,4 @@ server.on("connection", function (ws) {
   }
   hello(serverUptime(startDate, timeNow));
 });
+console.log('Websocket server listening on port 3000');

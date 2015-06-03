@@ -16,7 +16,7 @@ module.exports = function (grunt) {
       }
     },
     concat: {
-      'public/main.js': ['build/vendor.js', 'build/app.js']
+      './public/main.js': ['build/vendor.js', 'build/app.js']
     }
   });
   grunt.loadNpmTasks('grunt-browserify');

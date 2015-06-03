@@ -1,6 +1,7 @@
 var React = require('react');
 var SetIntervalMixin = require('./SetIntervalMixin.jsx');
 var moment = require('moment');
+
 module.exports = React.createClass({
   mixins: [SetIntervalMixin],
   getInitialState: function () {
@@ -34,7 +35,7 @@ module.exports = React.createClass({
 
     return (
       <span className="Timers">
-        App has been running for {this.state.elapsedTime}.
+        App uptime: {this.state.elapsedTime}.
       </span>
     );
   }

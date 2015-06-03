@@ -37,7 +37,7 @@ module.exports = React.createClass({
     var logTime = moment(this.state.loggedInTime).format('MM/DD hh:mm:ss a');
     return (
       <span className="Timers">
-        Server has been up since {serverUptime}. You logged in at {logTime} and have been connected for {mins} mins.
+        Server up since: {serverUptime}. You logged in at: {logTime}. Total {mins} mins.
       </span>
     );
   }

@@ -15,7 +15,7 @@ module.exports = React.createClass({
   },
   render: function () {
     return (
-      <span className="Timers">Current time: {this.getTime()}</span>
+      <span className="Timers">{this.getTime()}</span>
     );
   }
 });
