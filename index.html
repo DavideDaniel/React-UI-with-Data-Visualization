@@ -5,16 +5,12 @@
   <meta charset="UTF-8">
   <title>React UI with D3</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
-  <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-
   <link rel="stylesheet" href="public/css/style.css">
   <link rel="stylesheet" href="public/css/griddle.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.2/d3.min.js" charset="utf-8"></script>
 </head>
 
 <body>
-  <div id="routed" class="container">
+  <div class="container">
     <nav class="navbar nav-default">
       <div id="current-time"></div>
       <span id="app-time"></span>
@@ -24,27 +20,50 @@
     </nav>
     <div id="Routed"></div>
 
-
-    <div id="bar-graph"></div>
-    <div id="graph"></div>
-    <div id="chart"></div>
-    </div>
   </div>
-  <script src="public/app.js"></script>
-
+  </div>
+  <!-- <script src="build/app.js"></script> -->
+  <script src="public/main.js" type="text/javascript" charset="utf-8"></script>
   <script type="text/javascript" charset="utf-8">
     ws = new WebSocket("ws://localhost:3000/");
 
     ws.addEventListener('message', function(msgObj) {
       if (msgObj.type === 'data-message') {
-        var dataForD3 = msgObj.payload.data;
+        var dataFor = msgObj.payload.data;
         console.log(dataFor);
-        d3.json(dataForD3, function(error, data) {
-          if (error) return console.log("there was an error loading the data: " + error);
-          console.log("there are " + data.length + " elements in my dataset");
-        });
       }
     });
+    //
+    // nv.addGraph({
+    //       generate: function() {
+    //           var width = nv.utils.windowSize().width,
+    //               height = nv.utils.windowSize().height;
+    //           var chart = nv.models.multiBarChart()
+    //               .width(width)
+    //               .height(height)
+    //               .stacked(true)
+    //               ;
+    //           chart.dispatch.on('renderEnd', function(){
+    //               console.log('Render Complete');
+    //           });
+    //           var svg = d3.select('#test1 svg').datum(test_data);
+    //           console.log('calling chart');
+    //           svg.transition().duration(0).call(chart);
+    //           return chart;
+    //       },
+    //       callback: function(graph) {
+    //           nv.utils.windowResize(function() {
+    //               var width = nv.utils.windowSize().width;
+    //               var height = nv.utils.windowSize().height;
+    //               graph.width(width).height(height);
+    //               d3.select('#test1 svg')
+    //                   .attr('width', width)
+    //                   .attr('height', height)
+    //                   .transition().duration(0)
+    //                   .call(graph);
+    //           });
+    //       }
+    //   });
   </script>
 </body>
 

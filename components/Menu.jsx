@@ -7,25 +7,29 @@ var Link = Router.Link;
 
 module.exports = React.createClass({
 
-    getInitialState: function(){
-        return { focused: 0 };
-    },
+  getInitialState: function () {
+    return {
+      focused: 0
+    };
+  },
 
-    clicked: function(index){
-        this.setState({focused: index});
-    },
+  clicked: function (index) {
+    this.setState({
+      focused: index
+    });
+  },
 
-    render: function() {
-        var self = this;
-        return (
-                <ul className="Menu-bar nav navbar-nav navbar-right">{ this.props.items.map(function(item, index){
-                    var style = '';
-                    if(self.state.focused == index){
-                        style = 'focused';
-                    }
-                    return <li className={style} onClick={self.clicked.bind(self, index)}>{item}</li>;
-                }) }
-                </ul>
-        );
-    }
+  render: function () {
+    var self = this;
+    return (
+      <ul className="Menu-bar nav navbar-nav navbar-right">{this.props.items.map(function (item, index) {
+          var style = '';
+          if (self.state.focused == index) {
+            style = 'focused';
+          }
+          return <li className={style} onClick={self.clicked.bind(self, index)}>{item}</li>;
+        })}
+      </ul>
+    );
+  }
 });

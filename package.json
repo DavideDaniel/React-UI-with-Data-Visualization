@@ -15,7 +15,7 @@
     "modular"
   ],
   "author": "David Daniel <davidedaniel@gmail.com> (http://davidedaniel.github.io)",
-  "license": "ISC",
+  "license": "private",
   "dependencies": {
     "browserify": "^10.2.3",
     "d3": "^3.5.5",

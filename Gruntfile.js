@@ -12,15 +12,17 @@ module.exports = function (grunt) {
       },
       app: {
         src: './components/**/*.jsx',
-        dest: './public/app.js'
+        dest: './build/app.js'
       }
+    },
+    concat: {
+      'public/main.js': ['build/vendor.js', 'build/app.js']
     }
-    // concat: {
-    //   'public/main.js': ['build/vendor.js', 'build/app.js']
-    // }
   });
   grunt.loadNpmTasks('grunt-browserify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.registerTask('default', ['browserify', 'watch']);
+  // grunt.registerTask('default', ['browserify', 'watch']);
+  grunt.registerTask('default', ['browserify', 'concat']);
+  // grunt.registerTask('default', ['browserify']);
 };

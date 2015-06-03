@@ -1,11 +1,11 @@
 module.exports = {
-  componentWillMount: function() {
+  componentWillMount: function () {
     this.intervals = [];
   },
-  setInterval: function() {
+  setInterval: function () {
     this.intervals.push(setInterval.apply(null, arguments));
   },
-  componentWillUnmount: function() {
+  componentWillUnmount: function () {
     this.intervals.map(clearInterval);
   }
 };
