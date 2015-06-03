@@ -412,7 +412,7 @@
   6: [function (require, module, exports) {
     var React = require('react');
     var moment = require('moment');
-    var ws = new WebSocket("ws://localhost:3000");
+    // var ws = new WebSocket("ws://localhost:3000");
 
     module.exports = React.createClass({
       displayName: "exports",
@@ -427,22 +427,22 @@
         this.getServerUptime();
       },
       handleConnect: function (message) {
-        var msgObj = JSON.parse(message.data);
-        console.log(msgObj);
-        if (msgObj.type === 'data-message') {
-          console.log(msgObj.payload.data);
-        } else if (msgObj.type === 'time-message') {
-          var serverTotalTime = msgObj.payload.serverUptime;
-          this.setState({
-            serverUptime: serverTotalTime,
-            seconds: msgObj.payload.seconds,
-            loggedInTime: msgObj.payload.time
-          });
-          ws.send(message);
-        }
+        // var msgObj = JSON.parse(message.data);
+        // console.log(msgObj);
+        // if (msgObj.type === 'data-message') {
+        //   console.log(msgObj.payload.data);
+        // } else if (msgObj.type === 'time-message') {
+        //   var serverTotalTime = msgObj.payload.serverUptime;
+        //   this.setState({
+        //     serverUptime: serverTotalTime,
+        //     seconds: msgObj.payload.seconds,
+        //     loggedInTime: msgObj.payload.time
+        //   });
+        //   ws.send(message);
+        // }
       },
       getServerUptime: function () {
-        ws.addEventListener('message', this.handleConnect);
+        // ws.addEventListener('message', this.handleConnect);
       },
       render: function () {
         var serverUptime = moment(this.state.serverUptime).format(
@@ -5620,7 +5620,7 @@
               value = node.getAttribute("class");
               while (++i < n)
                 if (!d3_selection_classedRe(name[i]).test(value)) return
-                  false;
+              false;
             }
             return true;
           }
@@ -25403,8 +25403,8 @@
                 fromComponents,
                 function (error) {
                   if (error || transition.abortReason) return
-                    dispatchHandler.call(Router, error,
-                      transition); // No need to continue.
+                  dispatchHandler.call(Router, error,
+                    transition); // No need to continue.
 
                   Transition.to(transition, toRoutes,
                     nextParams, nextQuery,
@@ -47904,7 +47904,7 @@
         for (var index = 0; index < length; index++) {
           var currentKey = keys ? keys[index] : index;
           if (!predicate(obj[currentKey], currentKey, obj)) return
-            false;
+          false;
         }
         return true;
       };
@@ -48835,7 +48835,7 @@
         var areArrays = className === '[object Array]';
         if (!areArrays) {
           if (typeof a != 'object' || typeof b != 'object') return
-            false;
+          false;
 
           // Objects with different constructors are not equivalent, but `Object`s or `Array`s
           // from different frames are.
@@ -48873,7 +48873,7 @@
           // Deep compare the contents, ignoring non-numeric properties.
           while (length--) {
             if (!eq(a[length], b[length], aStack, bStack)) return
-              false;
+            false;
           }
         } else {
           // Deep compare objects.
