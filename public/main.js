@@ -254,7 +254,7 @@ Router.run(routes, function (Handler) {
 },{"../utils/Transformer":224,"../utils/data.json":225,"./AppUptime.jsx":1,"./CurrentTime.jsx":3,"./Menu.jsx":4,"./ServerUptime.jsx":6,"./StackedBarGraph.jsx":8,"griddle-react":22,"moment":26,"path":24,"react":222,"react-router":53}],6:[function(require,module,exports){
 var React = require('react');
 var moment = require('moment');
-var ws = new WebSocket("ws://localhost:3000");
+var ws = new WebSocket("ws://104.131.179.211:3000");
 
 module.exports = React.createClass({displayName: "exports",
   getInitialState: function () {
