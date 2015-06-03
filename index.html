@@ -21,18 +21,7 @@
     </nav>
     <div id="Routed"></div>
   </div>
-  <!-- <script src="build/app.js"></script> -->
   <script src="main.js" type="text/javascript" charset="utf-8"></script>
-  <script type="text/javascript" charset="utf-8">
-    ws = new WebSocket("ws://localhost:3000/");
-
-    ws.addEventListener('message', function(msgObj) {
-      if (msgObj.type === 'data-message') {
-        var dataFor = msgObj.payload.data;
-        console.log(dataFor);
-      }
-    });
-  </script>
 </body>
 
 </html>
