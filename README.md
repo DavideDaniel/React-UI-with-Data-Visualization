@@ -1,6 +1,9 @@
 # React-UI-with-Data-Visualization
 React UI with d3 &amp; chartist 
 
+### First up...
+`git clone https://github.com/DavideDaniel/React-UI-with-Data-Visualization.git`
+
 ### To run
 `$ npm install` - install dependencies
 
