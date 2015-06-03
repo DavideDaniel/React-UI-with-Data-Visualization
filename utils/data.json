@@ -1,0 +1,296 @@
+[{
+  "Year": "1962",
+  "GDP": "605.1",
+  "Federal outlays": "106.8",
+  "State outlays": "0.0"
+}, {
+  "Year": "1963",
+  "GDP": "638.6",
+  "Federal outlays": "111.3",
+  "State outlays": "0.0"
+}, {
+  "Year": "1964",
+  "GDP": "685.8",
+  "Federal outlays": "118.5",
+  "State outlays": "0.0"
+}, {
+  "Year": "1965",
+  "GDP": "743.7",
+  "Federal outlays": "118.2",
+  "State outlays": "0.0"
+}, {
+  "Year": "1966",
+  "GDP": "815",
+  "Federal outlays": "134.5",
+  "State outlays": "0.0"
+}, {
+  "Year": "1967",
+  "GDP": "861.7",
+  "Federal outlays": "157.5",
+  "State outlays": "0.0"
+}, {
+  "Year": "1968",
+  "GDP": "942.5",
+  "Federal outlays": "178.1",
+  "State outlays": "0.0"
+}, {
+  "Year": "1969",
+  "GDP": "1019.9",
+  "Federal outlays": "183.6",
+  "State outlays": "0.0"
+}, {
+  "Year": "1970",
+  "GDP": "1075.9",
+  "Federal outlays": "195.6",
+  "State outlays": "0.0"
+}, {
+  "Year": "1971",
+  "GDP": "1167.8",
+  "Federal outlays": "210.2",
+  "State outlays": "0.0"
+}, {
+  "Year": "1972",
+  "GDP": "1282.4",
+  "Federal outlays": "230.7",
+  "State outlays": "0.0"
+}, {
+  "Year": "1973",
+  "GDP": "1428.5",
+  "Federal outlays": "245.7",
+  "State outlays": "0.0"
+}, {
+  "Year": "1974",
+  "GDP": "1548.8",
+  "Federal outlays": "269.4",
+  "State outlays": "0.0"
+}, {
+  "Year": "1975",
+  "GDP": "1688.9",
+  "Federal outlays": "332.3",
+  "State outlays": "0.0"
+}, {
+  "Year": "1976",
+  "GDP": "1877.6",
+  "Federal outlays": "371.8",
+  "State outlays": "0.0"
+}, {
+  "Year": "1977",
+  "GDP": "2086",
+  "Federal outlays": "409.2",
+  "State outlays": "0.0"
+}, {
+  "Year": "1978",
+  "GDP": "2356.6",
+  "Federal outlays": "458.7",
+  "State outlays": "0.0"
+}, {
+  "Year": "1979",
+  "GDP": "2632.1",
+  "Federal outlays": "504.0",
+  "State outlays": "0.0"
+}, {
+  "Year": "1980",
+  "GDP": "2862.5",
+  "Federal outlays": "590.9",
+  "State outlays": "0.0"
+}, {
+  "Year": "1981",
+  "GDP": "3211",
+  "Federal outlays": "678.2",
+  "State outlays": "0.0"
+}, {
+  "Year": "1982",
+  "GDP": "3345",
+  "Federal outlays": "745.7",
+  "State outlays": "0.0"
+}, {
+  "Year": "1983",
+  "GDP": "3638.1",
+  "Federal outlays": "808.4",
+  "State outlays": "0.0"
+}, {
+  "Year": "1984",
+  "GDP": "4040.7",
+  "Federal outlays": "851.8",
+  "State outlays": "0.0"
+}, {
+  "Year": "1985",
+  "GDP": "4346.7",
+  "Federal outlays": "946.3",
+  "State outlays": "0.0"
+}, {
+  "Year": "1986",
+  "GDP": "4590.2",
+  "Federal outlays": "990.4",
+  "State outlays": "0.0"
+}, {
+  "Year": "1987",
+  "GDP": "4870.2",
+  "Federal outlays": "1004.0",
+  "State outlays": "0.0"
+}, {
+  "Year": "1988",
+  "GDP": "5252.6",
+  "Federal outlays": "1064.4",
+  "State outlays": "0.0"
+}, {
+  "Year": "1989",
+  "GDP": "5657.7",
+  "Federal outlays": "1143.7",
+  "State outlays": "0.0"
+}, {
+  "Year": "1990",
+  "GDP": "5979.6",
+  "Federal outlays": "1253.0",
+  "State outlays": "0.0"
+}, {
+  "Year": "1991",
+  "GDP": "6174",
+  "Federal outlays": "1324.2",
+  "State outlays": "0.0"
+}, {
+  "Year": "1992",
+  "GDP": "6539.3",
+  "Federal outlays": "1381.5",
+  "State outlays": "1146.9"
+}, {
+  "Year": "1993",
+  "GDP": "6878.7",
+  "Federal outlays": "1409.4",
+  "State outlays": "1210.1"
+}, {
+  "Year": "1994",
+  "GDP": "7308.8",
+  "Federal outlays": "1461.8",
+  "State outlays": "1260.6"
+}, {
+  "Year": "1995",
+  "GDP": "7664.1",
+  "Federal outlays": "1515.7",
+  "State outlays": "1347.8"
+}, {
+  "Year": "1996",
+  "GDP": "8100.2",
+  "Federal outlays": "1560.5",
+  "State outlays": "1393.7"
+}, {
+  "Year": "1997",
+  "GDP": "8608.5",
+  "Federal outlays": "1601.1",
+  "State outlays": "1456.9"
+}, {
+  "Year": "1998",
+  "GDP": "9089.2",
+  "Federal outlays": "1652.5",
+  "State outlays": "1525.8"
+}, {
+  "Year": "1999",
+  "GDP": "9660.6",
+  "Federal outlays": "1701.8",
+  "State outlays": "1622.1"
+}, {
+  "Year": "2000",
+  "GDP": "10284.8",
+  "Federal outlays": "1789.0",
+  "State outlays": "1742.9"
+}, {
+  "Year": "2001",
+  "GDP": "10621.8",
+  "Federal outlays": "1862.9",
+  "State outlays": "1891.9"
+}, {
+  "Year": "2002",
+  "GDP": "10977.5",
+  "Federal outlays": "2010.9",
+  "State outlays": "2047.2"
+}, {
+  "Year": "2003",
+  "GDP": "11510.7",
+  "Federal outlays": "2159.9",
+  "State outlays": "2164.2"
+}, {
+  "Year": "2004",
+  "GDP": "12274.9",
+  "Federal outlays": "2292.8",
+  "State outlays": "2262.0"
+}, {
+  "Year": "2005",
+  "GDP": "13093.7",
+  "Federal outlays": "2472.0",
+  "State outlays": "2363.7"
+}, {
+  "Year": "2006",
+  "GDP": "13855.9",
+  "Federal outlays": "2655.1",
+  "State outlays": "2495.8"
+}, {
+  "Year": "2007",
+  "GDP": "14477.6",
+  "Federal outlays": "2728.7",
+  "State outlays": "2659.1"
+}, {
+  "Year": "2008",
+  "GDP": "14718.6",
+  "Federal outlays": "2982.5",
+  "State outlays": "2834.8"
+}, {
+  "Year": "2009",
+  "GDP": "14418.7",
+  "Federal outlays": "3517.7",
+  "State outlays": "2989.0"
+}, {
+  "Year": "2010",
+  "GDP": "14964.4",
+  "Federal outlays": "3457.1",
+  "State outlays": "3110.8"
+}, {
+  "Year": "2011",
+  "GDP": "15079.6",
+  "Federal outlays": "3603.1",
+  "State outlays": "3155.3"
+}, {
+  "Year": "2012",
+  "GDP": "15601.5",
+  "Federal outlays": "3537.0",
+  "State outlays": "3147.6"
+}, {
+  "Year": "2013",
+  "GDP": "16202.7",
+  "Federal outlays": "3454.7",
+  "State outlays": "3118.1"
+}, {
+  "Year": "2014",
+  "GDP": "17011.4",
+  "Federal outlays": "3506.1",
+  "State outlays": "3090.2"
+}, {
+  "Year": "2015",
+  "GDP": "17936.1",
+  "Federal outlays": "3758.6",
+  "State outlays": "3113.7"
+}, {
+  "Year": "2016",
+  "GDP": "18934.2",
+  "Federal outlays": "3999.5",
+  "State outlays": "3184.7"
+}, {
+  "Year": "2017",
+  "GDP": "19980",
+  "Federal outlays": "4217.8",
+  "State outlays": "3301.0"
+}, {
+  "Year": "2018",
+  "GDP": "21024.8",
+  "Federal outlays": "4423.3",
+  "State outlays": "3459.2"
+}, {
+  "Year": "2019",
+  "GDP": "21539.9",
+  "Federal outlays": "4652.6",
+  "State outlays": "3656.5"
+}, {
+  "Year": "2020",
+  "GDP": "22476.4",
+  "Federal outlays": "4886.4",
+  "State outlays": "3885.5"
+}]

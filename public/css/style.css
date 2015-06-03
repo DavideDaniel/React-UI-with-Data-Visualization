@@ -1,0 +1,60 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600);
+@import url(http://fonts.googleapis.com/css?family=PT+Serif);
+html body{
+  font-family: "PT Serif";
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+a p ul li div span {
+  font-family: "Source Sans Pro"
+}
+
+.Timers {
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  padding: 10px;
+  clear:both;
+}
+.Timers ::after{
+  clear:both;
+}
+.Menu-bar li {
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+    cursor:pointer;
+    background-color:#447FD3;
+    transition:0.3s;
+}
+.Menu-bar a {
+  color: #fff;
+}
+.Menu-bar a:hover{
+  color: #000;
+}
+.Menu-bar li:hover{
+    background-color:#fff;
+}
+
+.Menu-bar > li.focused{
+    color:#000;
+    background-color:#CB3837;
+}
+.listOtech li {
+  text-decoration: none;
+  list-style: none;
+}
+.listOtech a {
+  text-decoration: none;
+}
+.selection ul {
+  margin: 0;
+  padding: 0;
+}
+.selection ul li {
+  display: inline;
+  text-decoration: none;
+  margin-left: 10px;
+  cursor: pointer;
+}
