@@ -1,7 +1,7 @@
 # React-UI-with-Data-Visualization
 React UI with d3 &amp; chartist
 
-*NOTE: If you get an error due to CORS with Chrome - either disable it or run this in Safari/Firefox*
+View hosted version: [here](http://104.131.179.211:8080/#/homePage)
 
 ### First up...
 `git clone https://github.com/DavideDaniel/React-UI-with-Data-Visualization.git`
