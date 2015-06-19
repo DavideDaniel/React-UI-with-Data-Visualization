@@ -10,7 +10,8 @@ var AppUptime = require('./AppUptime.jsx');
 var CurrentTime = require('./CurrentTime.jsx');
 var ServerUptime = require('./ServerUptime.jsx');
 var StackedBarGraph = require('./StackedBarGraph.jsx');
-var Chart = require('griddle-react');
+var Chart = require('./Chart.jsx');
+var Chartgraph = require('./ChartGraph.jsx');
 
 // utils & data
 var Transformer = require('../utils/Transformer');
@@ -49,6 +50,7 @@ var Home = React.createClass({
           <li><a href="https://nodejs.org/">Node.js</a></li>
           <li><a href="http://gruntjs.com/">Grunt.js</a></li>
           <li><a href="http://momentjs.com/">Moment.js</a></li>
+          <li><a href="http://expressjs.com/">Express.js</a></li>
           <li><a href="http://browserify.org/">Browserify</a></li>
           <li><a href="http://griddlegriddle.github.io/Griddle/">Griddle</a></li>
         </ul>
@@ -79,9 +81,8 @@ var Chart_Page = React.createClass({
     return (
       <div id="chart">
         <h3>Chart Page</h3>
-        <Chart columns={[
-          "Year", "GDP", "Federal outlays", "State outlays"
-        ]} results={gdpData} showFilter={true} showSettings={true} tableClassName="table"/>
+        <Chart data={gdpData}/>
+      <Chartgraph data={gdpData} type={"Bar"}/>
       </div>
     );
   }
@@ -94,7 +95,7 @@ var Graph_Page = React.createClass({
         <h3>Graph Page</h3>
         <StackedBarGraph dataKeys={[
           'date', 'GDP', 'Federal', 'State'
-        ]} file={path.normalize("./results.csv")} title={"GDP, Federal & State outlays"}/>
+        ]} file={path.normalize("./results.csv")} title={"GDP, Federal & State outlays from 1962 - 2020 (predicted)"}/>
       </div>
     );
   }

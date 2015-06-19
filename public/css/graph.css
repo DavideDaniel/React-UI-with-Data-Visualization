@@ -6,10 +6,10 @@
   shape-rendering: crispEdges;
 }
 
-.bar {
-  fill: steelblue;
-}
-
 .x.axis path {
   display: none;
+}
+
+.bar:hover{
+  fill: rgba(255, 255, 255, 0.35);
 }

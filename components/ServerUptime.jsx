@@ -1,6 +1,7 @@
 var React = require('react');
 var moment = require('moment');
-var ws = new WebSocket("ws://104.131.179.211:3000");
+// var ws = new WebSocket("ws://104.131.179.211:3000");
+var ws = new WebSocket("ws://localhost:3000");
 
 module.exports = React.createClass({
   getInitialState: function () {
@@ -37,7 +38,7 @@ module.exports = React.createClass({
     var logTime = moment(this.state.loggedInTime).format('MM/DD hh:mm:ss a');
     return (
       <span className="Timers">
-        Server up since: {serverUptime}. You logged in at: {logTime}. Total {mins} mins.
+        Server up since: {serverUptime} for a total of {mins} minutes. You logged in at: {logTime}.
       </span>
     );
   }

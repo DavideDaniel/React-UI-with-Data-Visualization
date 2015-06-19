@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "grunt; node server.js & node uptimeServer.js"
+    "start": "node server.js & node uptimeServer.js & grunt"
   },
   "keywords": [
     "react",

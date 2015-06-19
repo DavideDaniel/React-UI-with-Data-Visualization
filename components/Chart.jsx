@@ -1,17 +1,17 @@
 var React = require('react');
-var Chartist = require('chartist');
-var ChartistGraph = require('react-chartist');
+var Chart = require('griddle-react');
+// var Chartist = require('chartist');
+// var ChartistGraph = require('react-chartist');
+// var _ = require('underscore');
 
 module.exports = React.createClass({
-    render: function(){
-      var simpleLineChartData = {
-        labels: _.keys(this.props.data[0]),
-        series: []
-      };
-
-      _.each(this.props.data, function(item){
-        simpleLineChartData.series.push(_.values(item));
-        });
-        return <ChartistGraph data={simpleLineChartData} type={'Line'} />
-    }
-  });
+  render: function () {
+    return (
+      <div>
+        <Chart columns={[
+          "Year", "GDP", "Federal outlays", "State outlays"
+        ]} results={this.props.data} showFilter={true} showSettings={true} tableClassName="table"/>
+      </div>
+    );
+  }
+});

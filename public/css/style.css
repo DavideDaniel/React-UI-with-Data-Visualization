@@ -1,11 +1,11 @@
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600);
-@import url(http://fonts.googleapis.com/css?family=PT+Serif);
+@import url(http://fonts.googleapis.com/css?family=Raleway);
 html body{
-  font-family: "PT Serif";
+  font-family: "Source Sans Pro", Arial, sans-serif;
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Raleway", "Helvetica Neue", Helvetica;
 
 }
 
@@ -23,6 +23,7 @@ a p ul li div span {
 }
 .Menu-bar li {
   font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-weight: bold;
     cursor:pointer;
     background-color:#447FD3;
     transition:0.3s;
